@@ -42,7 +42,7 @@ const shoppingMallData = {
    height: 5,
    moneyPer1m3: 30,
    budget: 50000
-}
+};
 
 function isBudgetEnough(data) {
    let square = 0;
@@ -62,3 +62,5 @@ function isBudgetEnough(data) {
 }
 
 isBudgetEnough(shoppingMallData);
+
+
