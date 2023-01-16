@@ -64,3 +64,140 @@ function isBudgetEnough(data) {
 isBudgetEnough(shoppingMallData);
 
 
+//Remove String Spaces
+function noSpace(x){
+   return x.split(' ').join('');
+}
+ console.log(noSpace("  dfs  d "));
+
+
+//even or odd
+function evenOrOdd(number) {
+   return (number % 2) ? "Odd" : "Even";
+ }
+ console.log(evenOrOdd(10));
+
+ //The highest profit wins!
+ function minMax(arr){
+   let a = arr.sort((a,b)=> a - b).slice();  
+   return [a[0],a[a.length-1]];
+ }
+console.log(minMax([15,4,20,35,2]));
+
+function minMax(arr){
+   return [Math.min(...arr), Math.max(...arr)];
+ }
+
+ //Are You Playing Banjo?
+
+ function areYouPlayingBanjo(name) {
+   return name[0].toLowerCase() === "r" ? `${name} plays banjo` : `${name} does not play banjo`
+ }
+ console.log(areYouPlayingBanjo("romeo"));
+
+
+
+ //
+ // Setup
+const recordCollection = {
+   2548: {
+     albumTitle: 'Slippery When Wet',
+     artist: 'Bon Jovi',
+     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+   },
+   2468: {
+     albumTitle: '1999',
+     artist: 'Prince',
+     tracks: ['1999', 'Little Red Corvette']
+   },
+   1245: {
+     artist: 'Robert Palmer',
+     tracks: []
+   },
+   5439: {
+     albumTitle: 'ABBA Gold'
+   }
+ };
+ 
+ // Only change code below this line
+ function updateRecords(records, id, prop, value) {
+   if (prop !== 'tracks' && value !== "") {
+     records[id][prop] = value;
+   } else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+     records[id][prop] = [value];
+   } else if (prop === "tracks" && value !== "") {
+     records[id][prop].push(value);
+   } else if (value === "") {
+     delete records[id][prop];
+   }
+   return records;
+ }
+ //
+ // Setup
+const myArray = [];
+
+// Only change code below this line
+let i = 5;
+while(i>=0) {
+  myArray.push(i);
+  i--;
+}
+//
+function isLess(a, b) {
+   // Only change code below this line
+ return a < b;
+ 
+  
+   // Only change code above this line
+ }
+ 
+ isLess(10, 15);
+ //
+ // Setup
+function abTest(a, b) {
+   // Only change code below this line
+ if(a < 0 || b < 0) return undefined;
+ 
+ 
+   // Only change code above this line
+ 
+   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+ }
+ 
+ abTest(2,2);
+ //
+function nextInLine(arr, item) {
+   arr.push(item);
+    const removed = arr.shift();
+    return removed;
+    // Only change code above this line
+  }
+  //css fcc
+  transform: skewY(-10deg);
+  transform: skewX(24deg);
+//
+
+    box-shadow: 25px 10px 0 0 blue;
+//
+#rect {
+   animation-name: rainbow;
+   animation-duration: 4s;
+ }
+
+@keyframes rainbow {
+ 0% {
+   background-color: blue;
+ }
+ 50% {
+   background-color: green;
+ }
+ 100% {
+   background-color: yellow;
+ }
+}
+//
+function DNAtoRNA(dna) {
+   return dna.replaceAll("T","U");
+ }
+ console.log(DNAtoRNA("UTTT"));
+
