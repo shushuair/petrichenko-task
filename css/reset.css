@@ -25,3 +25,14 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
